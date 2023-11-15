@@ -29,3 +29,7 @@ jobs:
     - run: npm ci
     - run: npm test
     - run: npm run test:coverage
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact
+        path: coverage/tmp/
